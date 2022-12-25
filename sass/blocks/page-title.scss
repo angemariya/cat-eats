@@ -1,0 +1,54 @@
+.page-title {
+  font-weight: 400;
+  color: $black-title;
+
+  @include text(none, 36px);
+  text-align: center;
+  margin-top: 31px;
+  margin-bottom: 35px;
+
+  &--catalog {
+    text-align: left;
+    margin-bottom: 37px;
+  }
+
+  &--mobile {
+    margin-top: 29px;
+    margin-bottom: 38px;
+  }
+
+  &--form {
+    margin-bottom: 34px;
+  }
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+    font-size: 60px;
+    margin-top: 15px;
+    margin-bottom: 75px;
+
+    &--catalog {
+      margin-top: 41px;
+      margin-bottom: 26px;
+    }
+
+    &--form {
+      margin-bottom: 57px;
+      margin-top: 42px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-title {
+    &--catalog {
+      margin-top: 30px;
+      margin-bottom: 25px;
+    }
+
+    &--form {
+      margin-top: 32px;
+      margin-bottom: 54px;
+    }
+  }
+}

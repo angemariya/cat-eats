@@ -1,0 +1,32 @@
+@media (max-width: $only-mobile-width) {
+  .nav--opened .nav-list {
+    display: block;
+  }
+
+  .nav--closed .nav-list {
+    display: none;
+  }
+
+  .nav--nojs .nav-list {
+    display: block;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .nav {
+    width: 768px;
+    padding: 13px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nav {
+    width: 1300px;
+    padding: 43px 39px;
+  }
+}

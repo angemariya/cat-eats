@@ -1,0 +1,220 @@
+.example {
+  background-color: $grey;
+  padding: 20px 0;
+  padding-bottom: 33px;
+}
+
+.example__header {
+  margin-top: 10px;
+  margin-bottom: 36px;
+}
+
+.example__text {
+  font-family: $font-a;
+
+  @include text (none, 14px);
+  line-height: 1.29;
+  text-align: left;
+  color: $grey-text;
+  padding-right: 2px;
+  margin-bottom: 20px;
+}
+
+.example__data {
+  width: 124px;
+  padding-top: 17px;
+  padding-bottom: 18px;
+
+  @include text (uppercase, 24px);
+  color: $black-title;
+  text-align: center;
+  border: 1px solid $radio;
+  border-radius: 4px;
+  margin-bottom: -10px;
+}
+
+.example__data-desc {
+  @include text (lowercase, 12px);
+  position: absolute;
+  bottom: -11px;
+  left: 18px;
+  font-family: $font-a;
+  color: $grey-text;
+  padding: 0;
+  background-color: $grey;
+  border: 1px solid $grey;
+  width: 84px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.example__calculate {
+  @include text (uppercase, 14px);
+  text-align: center;
+  color: $black-title;
+  margin-top: 29px;
+}
+
+.example__table-wrap {
+  display: flex;
+}
+
+.example__col {
+  display: flex;
+  margin-right: 30px;
+  padding-bottom: 12px;
+  position: relative;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.example__word-wrap {
+  display: inline;
+}
+
+
+@media (min-width: $tablet-width) {
+  .example {
+    padding: 0;
+    padding-bottom: 30px;
+    background-color: white;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      height: 462px;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(to left, #eaeaea 50%, #f2f2f2 50%);
+    }
+  }
+
+  .example__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .example__wrapper-sm {
+    margin-bottom: 80px;
+  }
+
+  .example__header {
+    margin-top: 9px;
+    margin-bottom: 62px;
+  }
+
+  .example__text {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 51px;
+  }
+
+  .example__stats {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .example__data {
+    width: 162px;
+    font-size: 30px;
+    padding-bottom: 25px;
+  }
+
+  .example__col {
+    margin-right: 38px;
+  }
+
+  .example__data-desc {
+    font-size: 14px;
+    width: 145px;
+    background-color: white;
+    border: none;
+    padding: 0 8px;
+    top: 62px;
+    left: 8px;
+
+    &:last-child {
+      right: 12px;
+    }
+  }
+
+  .example__calculate {
+    font-size: 20px;
+    width: 175px;
+    text-align: right;
+    line-height: 26px;
+    margin-top: 12px;
+  }
+
+  .example__word-wrap {
+    display: inline-block;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example {
+    padding: 0;
+    padding-top: 16px;
+
+    //gradient doesn't work correct in IE11
+    // &::after {
+    //   margin-bottom: 39px;
+    //   background-image: linear-gradient(to right, #f2f2f2 calc(50% + 325px), #eaeaea calc(50% + 325px));
+    //   height: 477px;
+    //   bottom: -53px;
+    // }
+  }
+
+  .example__text {
+    width: 440px;
+    margin-bottom: 63px;
+  }
+
+  .example__header {
+    margin-bottom: 147px;
+    margin-top: 53px;
+  }
+
+  .example__calculate {
+    text-align: left;
+    width: auto;
+    margin-top: 54px;
+  }
+
+  .example__wrapper-sm {
+    display: block;
+    position: relative;
+    z-index: 2;
+    width: 530px;
+    margin-bottom: 0;
+    padding-bottom: 50px;
+  }
+
+  .example__wrapper {
+    flex-direction: row;
+  }
+
+  .example__stats {
+    flex-direction: column;
+  }
+
+  .example__word-wrap {
+    display: inline-block;
+    margin-left: 59px;
+
+    &--intext {
+      display: inline;
+      margin: 0;
+    }
+  }
+
+  .example__data-desc {
+    background-color: #f2f2f2;
+    width: 150px;
+  }
+}

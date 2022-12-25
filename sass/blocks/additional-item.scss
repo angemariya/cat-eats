@@ -1,0 +1,130 @@
+.additional-item {
+  border-top: 1px solid $radio;
+  padding-top: 14px;
+  padding-bottom: 17px;
+
+  &:nth-last-of-type() {
+    border-bottom: 1px solid $radio;
+  }
+}
+
+.additional-item__text {
+  @include text (uppercase, 16px);
+  text-align: left;
+  color: $black-brown;
+  margin: 0;
+  padding-bottom: 11px;
+}
+
+.additional-item__row {
+  font-family: $font-a;
+  // width: 100%;
+  display: flex;
+
+  @include text (none, 14px);
+  color: $grey-text;
+}
+
+.additional-item__data {
+  display: block;
+
+  &:nth-child(2) {
+    text-align: right;
+    width: 46px;
+    margin-left: auto;
+  }
+}
+
+.additional-item__wrapper {
+  display: block;
+  padding-bottom: 15px;
+}
+
+.additional-item__table {
+  display: block;
+  margin-left: auto;
+}
+
+@media (min-width: $tablet-width) {
+  .additional-item {
+    border-top: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd;
+    border-left: 1px solid #cdcdcd;
+    padding-top: 14px;
+    padding-bottom: 27px;
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+
+  .additional-item__data {
+    font-size: 16px;
+    margin-top: 16px;
+
+    &:first-child {
+      margin-right: 0;
+    }
+
+    &:nth-child(2) {
+      text-align: right;
+      width: 92px;
+      margin-left: auto;
+    }
+  }
+
+  .additional-item__wrapper-tab {
+    display: flex;
+  }
+
+  .additional-item__button {
+    width: 100%;
+  }
+
+  .additional-item__text {
+    font-size: 20px;
+    margin-top: 12px;
+    padding-bottom: 25px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .additional-item {
+    display: flex;
+    align-items: baseline;
+    border-left: none;
+    border-right: none;
+    padding-bottom: 14px;
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+
+  .additional-item__wrapper-tab {
+    flex-grow: 1;
+    margin-right: 0;
+    padding-right: 40px;
+  }
+
+  .additional-item__button {
+    width: 245px;
+  }
+
+  .additional-item__wrapper {
+    width: 285px;
+    padding-bottom: 0;
+  }
+
+  .additional-item__data {
+    margin-top: 0;
+    padding-top: 17px;
+
+    &:nth-child(1) {
+      margin-right: 0;
+      padding-right: 55px;
+    }
+  }
+
+  .additional-item__text {
+    margin-top: 0;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+}

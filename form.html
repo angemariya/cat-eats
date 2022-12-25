@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подбор программы</title>
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js" async=""></script>
+  </head>
+  <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+    <header class="header">
+      <nav class="nav nav--nojs nav--closed">
+        <div class="nav-wrapper">
+          <a class="nav-logo" href="index.html">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img class="nav-logo__image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Кэт энерджи">
+            </picture>
+          </a>
+          <button class="nav-toggle" type="button" aria-label="Открыть меню"></button>
+        </div>
+        <ul class="nav-list">
+          <li class="nav-list__item"><a class="nav-list__link" href="index.html">Главная</a></li>
+          <li class="nav-list__item"><a class="nav-list__link" href="catalog.html">Каталог продукции</a></li>
+          <li class="nav-list__item nav-list__item--active nav-list__item--underline"><a class="nav-list__link" href="#">Подбор программы</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <h1 class="page-title page-title--catalog page-title--form">Подбор программы</h1>
+        <p class="page-descr">Заполните анкету и мы подберем программу питания для вашего кота</p>
+
+      </div>
+      <section class="section-form">
+        <form class="form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="form__wrapper container-tab">
+            <fieldset class="form__fieldset form__fieldset--name">
+              <div class="form__fieldset-wrapper">
+                <label class="form__label form__label--text" for="name">Имя:*</label>
+                <input class="form__control form__control--text" type="text" id="name" name="name" placeholder="Барсик" required="">
+              </div>
+              <div class="form__fieldset-wrapper">
+                <label class="form__label form__label--text" for="weight">Вес (кг):*</label>
+                <input class="form__control form__control--text" type="text" id="weight" name="weight" placeholder="7" required="">
+              </div>
+              <div class="form__fieldset-wrapper">
+                <label class="form__label form__label--text" for="age">Возраст&nbsp;(лет):</label>
+                <input class="form__control form__control--text" type="text" id="age" name="age" placeholder="7">
+              </div>
+            </fieldset>
+
+            <fieldset class="form__fieldset form__fieldset--radio">
+              <div class="form__radio-container">
+                <input class="form__control form__control--radio" type="radio" name="weight" id="weight-loss" value="weight-loss" checked="">
+                <label class="form__label form__label--radio" for="weight-loss" tabindex="0">Похудение</label>
+
+                <input class="form__control form__control--radio" type="radio" name="weight" id="weight-gain" value="weight-gain">
+                <label class="form__label form__label--radio" for="weight-gain" tabindex="0">Набор массы</label>
+
+                <input class="form__control form__control--radio" type="radio" name="weight" id="need-advice" value="need-advice">
+                <label class="form__label form__label--radio" for="need-advice" tabindex="0">Не знаю (нужен ваш совет)</label>
+              </div>
+            </fieldset>
+          </div>
+
+          <fieldset class="form__fieldset form__fieldset--contact">
+            <div class="form__green-line">
+              <div class="container container-tab">
+                <h3 class="form__title form__title--contact">Контактные данные (владельца кота)</h3>
+              </div>
+            </div>
+            <div class="container container-tab">
+              <div class="form__wrapper-contact">
+                <div class="form__fieldset-container form__fieldset-container--email">
+                  <label class="form__label form__label--email" for="email">E-mail:*</label>
+                  <input class="form__control form__control--text" id="email" name="email" type="email" placeholder="kuklachev@gmail.com" required="">
+                  <svg class="form__icon-email" width="18" height="14" fill="#222222">
+                    <use xlink:href="#icon-mail"></use>
+                  </svg>
+                </div>
+                <div class="form__fieldset-container form__fieldset-container--phone">
+                  <label class="form__label form__label--phone" for="phone">Телефон:*</label>
+                  <input class="form__control form__control--text" id="phone" name="phone" type="tel" placeholder="8 (960) 900-60-90" required="">
+                  <svg class="form__icon-phone" width="21" height="21" fill="#222222">
+                    <use xlink:href="#icon-phone"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form__fieldset form__fieldset--comment">
+            <div class="form__green-line">
+              <div class="container container-tab">
+                <h3 class="form__title form__title--textarea">Комментарий</h3>
+              </div>
+            </div>
+            <div class="container container-tab">
+              <textarea class="form__control form__control--textarea" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset class="form__fieldset form__fieldset--extra">
+            <div class="form__green-line">
+              <div class="container container-tab">
+                <h3 class="form__title form__title--extra">Дополнительно</h3>
+              </div>
+            </div>
+            <div class="container container-tab">
+              <div class="form__checkboxs-list">
+                <div class="form__fieldset-container form__fieldset-container--checkbox">
+                  <input class="form__control form__control--checkbox" type="checkbox" id="sweetener" name="sweetener" checked="">
+                  <label class="form__label form__label--checkbox" for="sweetener" tabindex="0">Сахарозаменитель</label>
+                </div>
+                <div class="form__fieldset-container form__fieldset-container--checkbox">
+                  <input class="form__control form__control--checkbox" type="checkbox" id="water" name="water">
+                  <label class="form__label form__label--checkbox" for="water" tabindex="0">Питьевая вода</label>
+                </div>
+                <div class="form__fieldset-container form__fieldset-container--checkbox">
+                  <input class="form__control form__control--checkbox" type="checkbox" id="milk" name="milk">
+                  <label class="form__label  form__label--checkbox" for="milk" tabindex="0">Молоко</label>
+                </div>
+                <div class="form__fieldset-container form__fieldset-container--checkbox">
+                  <input class="form__control form__control--checkbox" type="checkbox" id="vitamins" name="vitamins">
+                  <label class="form__label  form__label--checkbox" for="vitamins" tabindex="0">Витамины</label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="container-tab form__button-wrap">
+            <input class="card-button card-button--form" type="submit" value="Отправить заявку">
+            <small class="tip tip--form">* — Обязательные поля</small>
+          </div>
+        </form>
+      </section>
+
+      <section class="contact contact--form">
+        <div class="container-tab contact__container">
+          <div class="contact__address contact__address--form">
+            <p class="contact__title">приглашаем к&nbsp;сотрудничеству дилеров!</p>
+            <p class="contact__descr">ул. Большая Конюшенная, д. 19/8
+              <span class="contact__city">Санкт-Петербург</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="map-wrapper">
+          <iframe class="map-wrapper__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5855003714323!2d30.322739976187407!3d59.9390199034087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sde!4v1586977974911!5m2!1sru!2sde" width="320" height="400" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <a class="logo-text" href="#" aria-label="На главную страницу">
+            <svg width="131" height="35">
+              <use xlink:href="#icon-logo-footer"></use>
+            </svg>
+          </a>
+          <ul class="social-links">
+            <li class="social-links__item">
+              <a class="social-links__link social-links__link--vk" href="#" aria-label="Вконтакте">
+                <svg class="social-links__svg social-links__svg--vk" fill="#666666" width="22" height="12">
+                  <use xlink:href="#icon-vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-links__item">
+              <a class="social-links__link social-links__link--insta" href="#" aria-label="Инстаграм">
+                <svg class="social-links__svg social-links__svg--insta" fill="#666666"  width="17" height="17">
+                    <use xlink:href="#icon-insta"></use>
+                  </svg>
+              </a>
+            </li>
+            <li class="social-links__item">
+              <a class="social-links__link social-links__link--fb" href="#" aria-label="Фейсбук">
+                <svg class="social-links__svg social-links__svg--fb" fill="#666666" width="10" height="19">
+                  <use xlink:href="#icon-fb"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <div class="copyright">
+            <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive" aria-label="На страницу HTML Academy">
+              <span class="copyright__text">HTML Academy</span>
+              <svg class="copyright__img" width="27" height="34" fill="#666666">
+                <use xlink:href="#icon-htmlacademy"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/mobile-menu.min.js"></script>
+  </body>
+</html>

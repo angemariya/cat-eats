@@ -1,0 +1,14 @@
+.footer {
+  background-color: $grey;
+}
+
+@media (min-width: $tablet-width) {
+  .footer {
+    padding-top: 30px;
+  }
+
+  .footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
